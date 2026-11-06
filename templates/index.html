@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark" />
+    <title>Piracy Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+    <script src="https://kit.fontawesome.com/182055fd1f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button class="button-green" id="addcontent" onclick="add_content()">ADD CONTENT</button>
+    <div id="contentContainer">
+    <div id="tv-shows">
+        <h1>TV Shows</h1>
+
+        {% for tv_show in tv_shows.items() %}
+            <h2>{{ tv_show[0] }}</h2>
+            <ul class="seasons">
+
+                {% for season in tv_show[1].items() %}
+                    <div class="season">
+                        <h3>Season {{ season[0] }}</h3>
+                        {% for episode in season[1].items() %}
+                            <li class="episode">E{{ episode[0] }} - {{episode[1]}}</li>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+    <div id="movies">
+        <h1>Movies</h1>
+        <ul id="movieslist">
+        {% for movie in movies %}
+
+            <li class="movie">{{ movie }}</li>
+
+        {% endfor %}
+        </ul>
+    </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

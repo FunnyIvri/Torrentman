@@ -1,0 +1,78 @@
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-color);
+    padding: 0px
+}
+
+.result {
+    background-color: var(--primary-bg-color);
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    width: 100%;
+}
+
+#searchcontainer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#searchbutton {
+    all: unset;
+    cursor: pointer;
+}
+
+#searchbox {
+
+    font-size: larger;
+}
+
+#searchicon {
+    margin-right: 100px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.namecontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    grid-column: 1/ 3;
+}
+
+
+.downloadbutton {
+
+    all: unset;
+    cursor: pointer;
+    height: 75px;
+    width: 20%;
+    margin-right: 10px;
+}
+
+.fa-download {
+    height: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    #searchbox {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 0px;
+    }
+
+    .name {
+        text-wrap-mode: wrap;
+        height: auto;
+        width: 50%;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
+
+a{
+    all:unset;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+body{
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+:root {
+  --primary-bg-color: #EAEDF1;
+  --primary-color: rgba(0, 0, 0, 0.87);
+  --border-color: 	rgba(0, 0, 0, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+  --primary-bg-color: 	#1c1b22;
+  --primary-color: #ffffff;
+  --border-color: 	rgba(255, 255, 255, 0.12);
+}}

@@ -1,0 +1,26 @@
+table, th, td {
+  border: 1px solid black;
+}
+body{
+    display:flex;
+    
+    align-items:center;
+    flex-direction: column;
+    font-size:x-large;
+}
+.torrent{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 5px solid var(--border-color);
+}
+button{
+  all:unset;
+  font-size: 15vh;
+  margin: 20px;
+}
+@media only screen and (max-width: 600px) {
+  body{
+    font-size:medium;
+  }
+}

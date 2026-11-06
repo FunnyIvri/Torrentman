@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark" />
+    <title>Manage Torrents</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='torrentmanager.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+    <script src="https://kit.fontawesome.com/182055fd1f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="torrents">
+        <div class="torrent">
+            <h1>TORRENT NAME</h1>
+            <progress value="32" max="100"> 32% </progress>
+            <h3>Downloading • 21.5% • 10m 15s</h3>
+            <h3>1.0GB/4.8GB</h3>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='torrrentmanager.js') }}"></script>
+</body>
+
+</html>

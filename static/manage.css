@@ -1,0 +1,18 @@
+#constantsContainer{
+    margin: 20px;
+    margin-left: 0 auto;
+    border: 5px solid var(--border-color);
+    width: 90%;
+}
+input{
+    width: auto;
+    field-sizing: content;
+}
+body{
+    margin: 0;
+    font-size: x-large;
+}
+button{
+    font-size: large;
+    height: 200px;
+}

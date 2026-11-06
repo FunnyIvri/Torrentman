@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add content</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='addcontent.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+    <script
+      src="https://kit.fontawesome.com/182055fd1f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="searchcontainer">
+      <button id="searchbutton" onclick="searchfrominput()">
+        <i id="searchicon" class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      
+      <input onkeydown="if(event.key === 'Enter') searchfrominput()" id="searchbox" type="text" value="{{ contentname }}" />
+    </div>
+
+    <div id="results"></div>
+    <script>
+        window.contentname = {{contentname | tojson}};
+    </script>
+    <script src="{{ url_for('static', filename='addcontent.js') }}"></script>
+  </body>
+</html>

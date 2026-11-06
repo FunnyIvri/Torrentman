@@ -1,0 +1,157 @@
+#contentContainer {
+    gap: 10px;
+    width: 90%;
+
+
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-color);
+}
+
+
+#tv-shows,
+#movies {
+    padding: 10px;
+    border: 5px solid var(--border-color);
+
+}
+
+#movies,
+#tv-shows {
+    margin-bottom: 10px;
+}
+
+.movie {
+    margin: 10px;
+    margin-left: 50px;
+    text-align: center;
+    list-style-position: inside;
+}
+
+#movieslist {
+    border: 5px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+}
+
+.seasons {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+}
+
+.season {
+
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border: 5px solid var(--border-color);
+}
+
+.episode {
+    margin: 10px;
+    margin-left: 100px
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    padding: 10px
+}
+
+@media only screen and (max-width: 600px) {
+
+    #contentContainer {
+        width: 90%;
+    }
+
+
+    .seasons {
+        display: block;
+        margin-left: 0px;
+        padding: 10px;
+
+    }
+
+    .season {
+
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .episode,
+    .movie {
+        margin: 0px;
+        list-style-type: none;
+    }
+
+}
+
+button {
+    width: 90%;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+}
+
+/* CSS */
+.button-green {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.button-green:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.button-green:hover {
+    background-color: #2c974b;
+}
+
+.button-green:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+
+.button-green:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+}
+
+.button-green:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}

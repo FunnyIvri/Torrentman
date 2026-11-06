@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark" />
+    <title>Manage Pime</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='manage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+    <script src="https://kit.fontawesome.com/182055fd1f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button onclick="runCommand('/restartpi/')">Restart pi</button>
+    <button onclick="runCommand('/restartapp/')">Restart torrentmanager</button>
+    <button onclick="runCommand('/restartjellyfin/')">Restart jellyfin</button>
+    <h1>Constants: </h1>
+    <div id="constantsContainer"></div>
+    <button onclick="saveConstants()">SAVE CONSTANTS</button>
+    <script src="{{ url_for('static', filename='manage.js') }}"></script>
+</body>
+
+</html>
